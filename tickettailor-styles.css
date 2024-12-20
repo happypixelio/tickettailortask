@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* SETTING VARIABLES STARTS */
+
+:root {
+    /*** Design System Colours ***/
+    --tickettailor-offwhite: #fdf9f8;
+    --tickettailor-navy: #222432;
+    --tickettailor-lgrey: #eff2ff;
+
+    /*** Standard Colours ***/
+    --black: #000000;
+    --white: #ffffff;
+    --grey: #6B7280;
+
+    /*** Accents and Borders ***/
+    --grey-100: #E0E7FF;
+    --grey-200: #E5E7EB;
+    --yellow: #FFCC00;
+}
+
+/*** AD HOC STYLES ***/
+
+.strong-text {
+    font-weight: 800;
+}
+
+.label-on-light {
+    font-weight: 800;
+    color: (--tickettailor-offwhite);
+}
+
+
+.no-space--top-bottom {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+
+/*** SETTING VARIABLES ENDS ***/
+
+body,html {
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  background: var(--tickettailor-offwhite);
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  scroll-behavior: smooth;
+}
+
+.tickettailor-header {
+  height: auto;
+  max-height: 100%;
+}
+
+.tickettailor-header-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  align-content: space-between;  
+  max-width: 1440px;
+  height: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 12px;
+  padding-right: 32px;
+  padding-bottom: 12px;
+  padding-left: 32px;
+}
+
+.header-logo {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+}
+
+/*** NAVIGATION STLYING ***/
+
+.tickettailor-header-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 90%;
+}
+
+.tickettailor-header-navigation--links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--tickettailor-navy);
+}
+
+.tickettailor-header-navigation--links li {
+  padding-right: 12px;
+}
+
+.thn-links a:link {
+    color: var(--tickettailor-navy);
+    text-decoration: none;
+}
+  
+/* .thn-links a:visited {
+    color: var(--grey-200);
+} */
+  
+.thn-links a:hover {
+    color: var(--grey);
+    text-decoration: underline;
+    transition: ease-in 0.5s;
+}
+
+.thn-links a:active {
+    color: var(--black);
+    font-weight: 700;
+}
+
+/*** MEDIA QUERIE FOR THIS SECTION ***/
+@media only screen and (max-width: 600px) {
+    .tickettailor-header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .tickettailor-header-navigation {
+        width: 50%;
+    }
+
+    .tickettailor-header-container {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .thn-links a:link {
+        display: none;
+    }
+
+    .tickettailor-header-navigation--links .secondary-btn {
+        display: none;
+    }
+
+    .tickettailor-header-navigation--links .primary-btn {
+        text-align: center;
+    }
+}
+
+/*** HERO STYLING ***/
+
+.tickettailor-hero {
+  width: 100%;
+  height: 600px;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background-repeat: no-repeat;
+  background-color: var(--tickettailor-offwhite);
+}
+
+.tickettailor-hero-container {
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto; 
+}
+
+.tickettailor-hero-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 60%;
+    padding: 1rem;
+}
+
+.tickettailor-hero--subtitle {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--black);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tickettailor-hero--title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    font-family: "Prompt", sans-serif;
+    line-height: 60px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    padding-top: 0px;
+    color: var(--black);
+}
+
+.tickettailor-hero--content {
+    font-size: 1.375rem;
+    font-weight: inherit;
+    line-height: 30px;
+    color: var(--black);
+}
+
+.tickettailor-hero-image {
+    width: 40%;
+}
+
+.tickettailor-hero img {
+    width: 100%;
+    border-radius: 14px;
+}
+
+/*** MEDIA QUERIE FOR THIS SECTION ***/
+@media only screen and (max-width: 600px) {
+    .tickettailor-hero {
+        min-height: 300px;
+        padding-top: 2rem;
+        padding-bottom: 8rem;
+      }
+
+    .tickettailor-hero-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .tickettailor-hero-title-wrapper {
+        display: flex;
+        align-items: center;
+        width: 95%;
+        padding: 0.75rem;
+    }
+
+    .tickettailor-hero--subtitle {
+        font-size: 0.85rem;
+    }
+
+    .tickettailor-hero--title {
+        font-size: 2.5rem;
+        font-weight: 800;
+        text-align: center;
+        line-height: 40px;
+    }
+
+    .tickettailor-hero--content {
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    .tickettailor-hero-image {
+        margin-top: 2rem;
+        width: 90%;
+    }
+}
+
+/*** BUTTON & FORM STYLING ***/
+
+.primary-btn, .secondary-btn, .teritary-btn {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: auto;
+    border: 0px;
+    border-radius: 50px;
+    padding-top: 12px;    
+    padding-right: 20px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    font-size: 1.063rem;
+    font-weight: 500;
+    font-family: "Prompt", sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0px 6px 15px -2px rgba(16, 24, 40, 0.08), 0px 6px 15px -2px rgba(16, 24, 40, 0.08);
+}
+
+.primary-btn {
+    color: var(--white);
+    background-color: var(--tickettailor-navy); 
+}
+
+.primary-btn:hover {
+    background-color: var(--black);
+}
+
+.secondary-btn {
+    color: var(--tickettailor-navy);
+    background-color: var(--tickettailor-offwhite);
+}
+
+.secondary-btn:hover {
+    color: var(--tickettailor-navy);
+    background-color: var(--tickettailor-lgrey);
+}
+
+.teritary-btn {
+    color: var(--tickettailor-navy);
+    background-color: var(--white); 
+}
+
+form {
+    margin-top: 3rem;
+}
+
+label[for="events"] {
+    font-size: 1.3rem;
+    color: var(--tickettailor-offwhite);
+}
+
+.tt-select-form {
+    width: 400px;
+    padding: 8px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border: 1px solid (--tickettailor-offwhite);
+    font-size: 1.1rem;
+    color: var(--tickettailor-navy);
+    /* border-radius: 12px; */
+}
+
+#results {
+    margin-top: 3rem;
+    color: var(--yellow);
+}
+
+/*** CONTAINER STYLING ***/
+
+#task-container {
+    width: 100%;
+    height: 500px;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    background-color: var(--tickettailor-navy);
+  }
+
+.task-content-container {
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.content-block-title {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    font-size: 3.75rem;
+    color: var(--tickettailor-offwhite);
+}
+
+.content-block-copy {
+    margin-top: 0px;
+    padding-top: 0px;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--tickettailor-offwhite);    
+}
+
+/*** MEDIA QUERIE FOR THIS SECTION ***/
+@media only screen and (max-width: 600px) {
+    .task-content-container {
+        width: 90%;
+        min-height: 300px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .content-block-title  {
+        font-size: 2.4rem;
+    }
+    .content-block-copy {
+        font-size: 1rem;
+    }
+
+    .tt-select-form {
+        width: 100%;
+    }
+}
+
+
+.tickettailor-footer {
+    width: 100%;
+    min-height: 200px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: var(--black);
+}
+
+.tickettailor-footer-wrapper {
+    display: flex;
+    flex-direction: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1440px;
+    max-width: 100%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.footer-col--1, .footer-col--2, .footer-col--3, .footer-col--4 {
+    height: auto;
+    padding: 8px;
+}
+
+.footer-col--1 {
+    width: 352px;
+    font-size: 1.2rem;
+    color: var(--tickettailor-offwhite);
+}
+
+.footer-col--2, .footer-col--3, .footer-col--4  {
+    width: 245px;
+}
+
+.footer-stacked-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--tickettailor-navy)
+}
+
+.footer-stacked-links li {
+    font-size: 14px;
+    color: var(--white);
+    padding-bottom: 8px;
+}
+
+.footer-row-links {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--tickettailor-navy)
+}
+
+.footer-row-links li {
+    font-size: 1.3rem;
+    color: var(--white);
+    padding-right: 10px;
+}
+
+.footer-titles {
+    margin-top: 0px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footer-logo {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.ftr-links a:link {
+    color: var(--white);
+    text-decoration: none;
+}
+  
+.ftr-links a:visited {
+    color: var(--white);
+}
+  
+.ftr-links a:hover {
+    color: var(--tickettailor-navy);
+    text-decoration: underline;
+    transition: ease-in 0.5s;
+}
+
+.ftr-links a:active {
+    color: var(--black);
+    font-weight: 700;
+}
+
+.ftr-links-social a:link {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.ftr-links-social a:hover {
+    color: var(--tickettailor-red);
+    transition: ease-in 0.5s;    
+}
+
+/*** MEDIA QUERIE FOR THIS SECTION ***/
+@media only screen and (max-width: 600px) {
+    .footer-col--1, .footer-col--2, .footer-col--3, .footer-col--4  {
+        width: 90%;
+    }
+
+    .tickettailor-footer-wrapper {
+        flex-direction: column;
+    }
+}
